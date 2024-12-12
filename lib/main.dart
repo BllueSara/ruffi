@@ -1,32 +1,22 @@
-import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
+
+
+import 'package:flutter/material.dart';
+import 'package:ruffi/splachScreen.dart';
+
+void main(){
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      title: 'Book Reader',
       theme: ThemeData(
-        fontFamily: 'IBMPlexSansArabic', // اسم العائلة المعرّف في pubspec.yaml
+        primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        backgroundColor: Color(0xFF5B48D2),
-        body: Center(
-          child: Text(
-            'مرحبًا بك في تطبيق Flutter!',
-            style: TextStyle(
-              fontSize: 24, // حجم النص
-              color: Colors.white, // لون النص
-              fontWeight: FontWeight.w500, // وزن الخط
-            ),
-          ),
-        ),
-      ),
+      home: SplashScreen(),
     );
   }
 }
